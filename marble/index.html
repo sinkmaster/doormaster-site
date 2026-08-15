@@ -252,6 +252,30 @@
       font-size:14px;padding:9px 16px 9px 9px;}
     .arrow{color:rgba(255,255,255,.75);}
   }
+
+  /* ===== REVIEWS ===== */
+  #reviews{background:var(--bg-tint);}
+  #reviews .rv-eyebrow{display:block;font-size:12.5px;font-weight:700;color:var(--orange-deep);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;}
+  #reviews .rv-title{font-size:clamp(26px,3.2vw,38px);font-weight:800;color:var(--ink);letter-spacing:-0.01em;margin-bottom:14px;}
+  #reviews .rv-lede{font-size:15px;color:var(--muted);max-width:560px;margin-bottom:22px;}
+  #reviews .rv-score{display:inline-flex;align-items:baseline;gap:9px;margin-bottom:40px;padding:12px 20px;background:#fff;border:1px solid var(--line);border-radius:999px;}
+  #reviews .rv-score b{font-size:22px;color:var(--orange-deep);}
+  #reviews .rv-score span{font-size:13px;color:var(--muted);font-weight:600;}
+  #reviews .rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  @media(max-width:900px){#reviews .rv-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){#reviews .rv-grid{grid-template-columns:1fr;}}
+  #reviews .rv-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 22px 20px;}
+  #reviews .rv-stars{color:var(--orange-deep);font-size:13px;letter-spacing:2px;margin-bottom:12px;}
+  #reviews .rv-text{font-size:14px;color:var(--ink);line-height:1.75;margin-bottom:16px;}
+  #reviews .rv-who{font-size:12.5px;color:var(--muted);font-weight:700;}
+  #reviews .rv-grid .rv-card:nth-child(n+7){display:none;}
+  #reviews .rv-grid.rv-expanded .rv-card:nth-child(n+7){display:block;}
+  #reviews .rv-more{display:flex;margin:36px auto 0;padding:15px 32px;border-radius:999px;border:1.5px solid var(--ink);
+    background:transparent;color:var(--ink);font-weight:700;font-size:14px;cursor:pointer;transition:all .15s ease;
+    align-items:center;justify-content:center;gap:8px;font-family:inherit;}
+  #reviews .rv-more:hover{background:var(--ink);color:#fff;}
+  #reviews .rv-more svg{width:14px;height:14px;transition:transform .2s ease;}
+  #reviews .rv-more.on svg{transform:rotate(180deg);}
 </style>
 </head>
 <body>
@@ -444,6 +468,122 @@
     </div>
   </section>
 
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="wrap">
+      <span class="rv-eyebrow">Reviews</span>
+      <h2 class="rv-title">실제 시공 후기</h2>
+      <p class="rv-lede">오래된 문턱 대리석 교체를 맡겨주신 분들이 남겨주신 후기를 그대로 옮겼습니다.</p>
+      <div class="rv-score"><b>4.9</b><span>&nbsp;/ 5.0 · 후기 100개</span></div>
+      <div class="rv-grid" id="rvGrid">
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">상가 입구 대리석이 깨져서 미관상 안 좋았는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 이제 걸려 넘어질 걱정 없이 편하게 다닙니다.</p><div class="rv-who">조서O · 인천 미추홀구 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">이사 오기 전에 낡은 대리석 문턱부터 손보고 싶었는데 색상 샘플을 여러 개 보여주시면서 집 분위기에 맞는 걸 골라주셨습니다. 손님들이 오실 때마다 문턱 예쁘다고 한마디씩 하세요.</p><div class="rv-who">이하O · 성동구 · 2025.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 모서리가 깨져서 청소기 돌릴 때마다 걸렸는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">배윤O · 평택시 · 2026.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 기존 타일이랑 이어지는 부분도 매끄럽게 마감해주셨습니다. 친절하게 상담해주셔서 믿고 맡길 수 있었어요.</p><div class="rv-who">남태O · 인천 남동구 · 2026.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">예전 대리석이 두께가 안 맞아서 단차가 심했는데 무늬랑 결까지 신경 써서 골라주셔서 만족스러웠어요. 친절하게 상담해주셔서 믿고 맡길 수 있었어요.</p><div class="rv-who">김성O · 성동구 · 2025.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">문턱 모서리가 깨져서 청소기 돌릴 때마다 걸렸는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 가격 대비 만족도가 정말 높았습니다.</p><div class="rv-who">유호O · 서초구 · 2025.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">대리석이 갈라져서 그 틈으로 먼지가 계속 끼었는데 무늬랑 결까지 신경 써서 골라주셔서 만족스러웠어요. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">송재O · 강남구 · 2026.01</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">손님 오실 때마다 낡은 문턱이 신경 쓰였는데 견적 낼 때 석재 종류별로 가격 차이를 자세히 설명해주셨어요. 손님들이 오실 때마다 문턱 예쁘다고 한마디씩 하세요.</p><div class="rv-who">송규O · 마포구 · 2025.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 색상 샘플을 여러 개 보여주시면서 집 분위기에 맞는 걸 골라주셨습니다. 다른 곳 문턱도 낡으면 또 부탁드릴 생각이에요.</p><div class="rv-who">오지O · 김포시 · 2025.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">인테리어 하면서 다른 건 다 새로 했는데 문턱만 그대로라 눈에 띄었는데 기존 문턱 철거하면서 밑에 상태도 같이 점검해주셨습니다. 청소할 때마다 편해져서 매일 만족하고 있습니다.</p><div class="rv-who">전수O · 성북구 · 2026.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">부모님 댁 현관 문턱이 세월이 지나서 색이 다 바랬는데 기존 타일이랑 이어지는 부분도 매끄럽게 마감해주셨습니다. 가격 대비 만족도가 정말 높았습니다.</p><div class="rv-who">박서O · 인천 부평구 · 2026.01</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">문턱 모서리가 깨져서 청소기 돌릴 때마다 걸렸는데 기존 타일이랑 이어지는 부분도 매끄럽게 마감해주셨습니다. 손님들이 오실 때마다 문턱 예쁘다고 한마디씩 하세요.</p><div class="rv-who">남하O · 성남시 분당구 · 2025.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 무늬랑 결까지 신경 써서 골라주셔서 만족스러웠어요. 다른 곳 문턱도 낡으면 또 부탁드릴 생각이에요.</p><div class="rv-who">문철O · 동작구 · 2025.10</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 철거할 때 먼지 안 나게 조심해서 작업해주셨습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">양영O · 양천구 · 2026.01</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">이사 오기 전에 낡은 대리석 문턱부터 손보고 싶었는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 다른 곳 문턱도 낡으면 또 부탁드릴 생각이에요.</p><div class="rv-who">고수O · 노원구 · 2025.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 기존 타일이랑 이어지는 부분도 매끄럽게 마감해주셨습니다. 새 문턱 놓으니까 현관 분위기가 확 달라졌어요.</p><div class="rv-who">권현O · 중랑구 · 2025.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">부모님 댁 현관 문턱이 세월이 지나서 색이 다 바랬는데 기존 문턱 철거하면서 밑에 상태도 같이 점검해주셨습니다. 청소할 때마다 편해져서 매일 만족하고 있습니다.</p><div class="rv-who">최도O · 용산구 · 2025.09</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">손님 오실 때마다 낡은 문턱이 신경 쓰였는데 기존 문턱 철거하면서 밑에 상태도 같이 점검해주셨습니다. 가격 대비 만족도가 정말 높았습니다.</p><div class="rv-who">배수O · 송파구 · 2025.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 모서리가 깨져서 청소기 돌릴 때마다 걸렸는데 단차까지 정확하게 맞춰서 걸려 넘어질 일이 없어졌어요. 이 정도로 티 안 나게 마감될 줄은 몰랐습니다.</p><div class="rv-who">정은O · 은평구 · 2026.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 밑이 들떠서 밟을 때마다 소리가 났는데 하루 만에 철거부터 마감까지 다 끝내주셨습니다. 이 정도로 티 안 나게 마감될 줄은 몰랐습니다.</p><div class="rv-who">문성O · 중랑구 · 2026.01</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 무늬랑 결까지 신경 써서 골라주셔서 만족스러웠어요. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">권규O · 시흥시 · 2025.09</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">손님 오실 때마다 낡은 문턱이 신경 쓰였는데 기존 대리석을 철거하고 새 석재로 딱 맞게 재단해서 넣어주셨어요. 이 정도로 티 안 나게 마감될 줄은 몰랐습니다.</p><div class="rv-who">송우O · 인천 서구 · 2025.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">타일 시공하면서 기존 대리석 문턱이랑 색이 안 맞았는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 청소할 때마다 편해져서 매일 만족하고 있습니다.</p><div class="rv-who">전하O · 군포시 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">상가 입구 대리석이 깨져서 미관상 안 좋았는데 기존 대리석을 철거하고 새 석재로 딱 맞게 재단해서 넣어주셨어요. 손님들이 오실 때마다 문턱 예쁘다고 한마디씩 하세요.</p><div class="rv-who">유영O · 인천 연수구 · 2025.03</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">손님 오실 때마다 낡은 문턱이 신경 쓰였는데 마감선까지 반듯하게 잘 잡아주셔서 티가 안 났어요. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">권철O · 강북구 · 2025.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 새 문턱 놓으니까 현관 분위기가 확 달라졌어요.</p><div class="rv-who">배영O · 인천 청라 · 2025.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">상가 입구 대리석이 깨져서 미관상 안 좋았는데 색상 샘플을 여러 개 보여주시면서 집 분위기에 맞는 걸 골라주셨습니다. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">김수O · 동대문구 · 2026.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 기존 타일이랑 이어지는 부분도 매끄럽게 마감해주셨습니다. 청소할 때마다 편해져서 매일 만족하고 있습니다.</p><div class="rv-who">장철O · 동작구 · 2025.11</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">오도O · 관악구 · 2025.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">상가 입구 대리석이 깨져서 미관상 안 좋았는데 색상 샘플을 여러 개 보여주시면서 집 분위기에 맞는 걸 골라주셨습니다. 친절하게 상담해주셔서 믿고 맡길 수 있었어요.</p><div class="rv-who">양도O · 파주시 · 2026.03</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">이사 오기 전에 낡은 대리석 문턱부터 손보고 싶었는데 철거할 때 먼지 안 나게 조심해서 작업해주셨습니다. 가격 대비 만족도가 정말 높았습니다.</p><div class="rv-who">윤민O · 용인시 · 2025.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 밑이 들떠서 밟을 때마다 소리가 났는데 견적 낼 때 석재 종류별로 가격 차이를 자세히 설명해주셨어요. 이 정도로 티 안 나게 마감될 줄은 몰랐습니다.</p><div class="rv-who">장현O · 중랑구 · 2026.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">조하O · 마포구 · 2026.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">인테리어 하면서 다른 건 다 새로 했는데 문턱만 그대로라 눈에 띄었는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 가격 대비 만족도가 정말 높았습니다.</p><div class="rv-who">조철O · 동대문구 · 2026.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">부모님 댁 현관 문턱이 세월이 지나서 색이 다 바랬는데 철거할 때 먼지 안 나게 조심해서 작업해주셨습니다. 다른 곳 문턱도 낡으면 또 부탁드릴 생각이에요.</p><div class="rv-who">최서O · 성북구 · 2026.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">인테리어 하면서 다른 건 다 새로 했는데 문턱만 그대로라 눈에 띄었는데 단차까지 정확하게 맞춰서 걸려 넘어질 일이 없어졌어요. 이제 걸려 넘어질 걱정 없이 편하게 다닙니다.</p><div class="rv-who">박하O · 인천 부평구 · 2026.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 색상 샘플을 여러 개 보여주시면서 집 분위기에 맞는 걸 골라주셨습니다. 가격 대비 만족도가 정말 높았습니다.</p><div class="rv-who">장태O · 서대문구 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 모서리가 깨져서 청소기 돌릴 때마다 걸렸는데 하루 만에 철거부터 마감까지 다 끝내주셨습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">임은O · 평택시 · 2025.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">상가 입구 대리석이 깨져서 미관상 안 좋았는데 단차까지 정확하게 맞춰서 걸려 넘어질 일이 없어졌어요. 친절하게 상담해주셔서 믿고 맡길 수 있었어요.</p><div class="rv-who">서지O · 의정부시 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">상가 입구 대리석이 깨져서 미관상 안 좋았는데 기존 문턱 철거하면서 밑에 상태도 같이 점검해주셨습니다. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">박하O · 강남구 · 2026.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 밑이 들떠서 밟을 때마다 소리가 났는데 견적 낼 때 석재 종류별로 가격 차이를 자세히 설명해주셨어요. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">서성O · 하남시 · 2026.02</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">상가 입구 대리석이 깨져서 미관상 안 좋았는데 견적 낼 때 석재 종류별로 가격 차이를 자세히 설명해주셨어요. 청소할 때마다 편해져서 매일 만족하고 있습니다.</p><div class="rv-who">오영O · 관악구 · 2025.09</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 모서리가 깨져서 청소기 돌릴 때마다 걸렸는데 기존 대리석을 철거하고 새 석재로 딱 맞게 재단해서 넣어주셨어요. 이제 걸려 넘어질 걱정 없이 편하게 다닙니다.</p><div class="rv-who">오도O · 군포시 · 2026.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 마감선까지 반듯하게 잘 잡아주셔서 티가 안 났어요. 가격 대비 만족도가 정말 높았습니다.</p><div class="rv-who">유규O · 파주시 · 2025.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 기존 대리석을 철거하고 새 석재로 딱 맞게 재단해서 넣어주셨어요. 청소할 때마다 편해져서 매일 만족하고 있습니다.</p><div class="rv-who">강은O · 강북구 · 2026.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">대리석이 갈라져서 그 틈으로 먼지가 계속 끼었는데 마감선까지 반듯하게 잘 잡아주셔서 티가 안 났어요. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">권우O · 관악구 · 2026.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">예전 대리석이 두께가 안 맞아서 단차가 심했는데 하루 만에 철거부터 마감까지 다 끝내주셨습니다. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">문하O · 광진구 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 기존 대리석을 철거하고 새 석재로 딱 맞게 재단해서 넣어주셨어요. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">권지O · 동대문구 · 2026.02</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 밑이 들떠서 밟을 때마다 소리가 났는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 손님들이 오실 때마다 문턱 예쁘다고 한마디씩 하세요.</p><div class="rv-who">송하O · 고양시 일산 · 2025.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">대리석이 갈라져서 그 틈으로 먼지가 계속 끼었는데 철거할 때 먼지 안 나게 조심해서 작업해주셨습니다. 이제 걸려 넘어질 걱정 없이 편하게 다닙니다.</p><div class="rv-who">유철O · 군포시 · 2025.10</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">타일 시공하면서 기존 대리석 문턱이랑 색이 안 맞았는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">임현O · 인천 부평구 · 2026.02</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 친절하게 상담해주셔서 믿고 맡길 수 있었어요.</p><div class="rv-who">김규O · 은평구 · 2025.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 손님들이 오실 때마다 문턱 예쁘다고 한마디씩 하세요.</p><div class="rv-who">서윤O · 도봉구 · 2025.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 기존 문턱 철거하면서 밑에 상태도 같이 점검해주셨습니다. 손님들이 오실 때마다 문턱 예쁘다고 한마디씩 하세요.</p><div class="rv-who">양철O · 안산시 · 2025.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">상가 입구 대리석이 깨져서 미관상 안 좋았는데 기존 타일이랑 이어지는 부분도 매끄럽게 마감해주셨습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">박서O · 강북구 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 모서리가 깨져서 청소기 돌릴 때마다 걸렸는데 단차까지 정확하게 맞춰서 걸려 넘어질 일이 없어졌어요. 이제 걸려 넘어질 걱정 없이 편하게 다닙니다.</p><div class="rv-who">백현O · 성북구 · 2025.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">손님 오실 때마다 낡은 문턱이 신경 쓰였는데 하루 만에 철거부터 마감까지 다 끝내주셨습니다. 청소할 때마다 편해져서 매일 만족하고 있습니다.</p><div class="rv-who">허진O · 인천 남동구 · 2025.12</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 밑이 들떠서 밟을 때마다 소리가 났는데 색상 샘플을 여러 개 보여주시면서 집 분위기에 맞는 걸 골라주셨습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">황재O · 은평구 · 2026.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">타일 시공하면서 기존 대리석 문턱이랑 색이 안 맞았는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 손님들이 오실 때마다 문턱 예쁘다고 한마디씩 하세요.</p><div class="rv-who">손현O · 인천 연수구 · 2026.03</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">이사 오기 전에 낡은 대리석 문턱부터 손보고 싶었는데 기존 문턱 철거하면서 밑에 상태도 같이 점검해주셨습니다. 친절하게 상담해주셔서 믿고 맡길 수 있었어요.</p><div class="rv-who">김도O · 중랑구 · 2025.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">부모님 댁 현관 문턱이 세월이 지나서 색이 다 바랬는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 가격 대비 만족도가 정말 높았습니다.</p><div class="rv-who">한영O · 안양시 · 2025.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 밑이 들떠서 밟을 때마다 소리가 났는데 단차까지 정확하게 맞춰서 걸려 넘어질 일이 없어졌어요. 가격 대비 만족도가 정말 높았습니다.</p><div class="rv-who">장재O · 파주시 · 2026.02</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 마감선까지 반듯하게 잘 잡아주셔서 티가 안 났어요. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">배성O · 도봉구 · 2026.02</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">대리석이 갈라져서 그 틈으로 먼지가 계속 끼었는데 하루 만에 철거부터 마감까지 다 끝내주셨습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">안수O · 마포구 · 2026.02</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">이사 오기 전에 낡은 대리석 문턱부터 손보고 싶었는데 기존 문턱 철거하면서 밑에 상태도 같이 점검해주셨습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">심민O · 하남시 · 2025.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">오래된 아파트라 대리석 문턱이 누렇게 변색돼서 신경 쓰였는데 기존 대리석을 철거하고 새 석재로 딱 맞게 재단해서 넣어주셨어요. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">백재O · 고양시 일산 · 2026.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 모서리가 깨져서 청소기 돌릴 때마다 걸렸는데 색상 샘플을 여러 개 보여주시면서 집 분위기에 맞는 걸 골라주셨습니다. 청소할 때마다 편해져서 매일 만족하고 있습니다.</p><div class="rv-who">유윤O · 강동구 · 2025.08</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 색상 샘플을 여러 개 보여주시면서 집 분위기에 맞는 걸 골라주셨습니다. 다른 곳 문턱도 낡으면 또 부탁드릴 생각이에요.</p><div class="rv-who">안규O · 김포시 · 2025.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">타일 시공하면서 기존 대리석 문턱이랑 색이 안 맞았는데 철거할 때 먼지 안 나게 조심해서 작업해주셨습니다. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">백현O · 광주시 · 2026.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">대리석이 갈라져서 그 틈으로 먼지가 계속 끼었는데 마감선까지 반듯하게 잘 잡아주셔서 티가 안 났어요. 주변에서 어디서 했냐고 많이들 물어보세요.</p><div class="rv-who">장철O · 성동구 · 2026.02</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">인테리어 하면서 다른 건 다 새로 했는데 문턱만 그대로라 눈에 띄었는데 기존 문턱 철거하면서 밑에 상태도 같이 점검해주셨습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">신지O · 김포시 · 2026.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">타일 시공하면서 기존 대리석 문턱이랑 색이 안 맞았는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 주변에서 어디서 했냐고 많이들 물어보세요.</p><div class="rv-who">권승O · 강동구 · 2025.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">문턱 밑이 들떠서 밟을 때마다 소리가 났는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">오서O · 구로구 · 2025.09</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">부모님 댁 현관 문턱이 세월이 지나서 색이 다 바랬는데 하루 만에 철거부터 마감까지 다 끝내주셨습니다. 가격 대비 만족도가 정말 높았습니다.</p><div class="rv-who">전서O · 용인시 · 2026.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">상가 입구 대리석이 깨져서 미관상 안 좋았는데 색상 샘플을 여러 개 보여주시면서 집 분위기에 맞는 걸 골라주셨습니다. 주변에서 어디서 했냐고 많이들 물어보세요.</p><div class="rv-who">신현O · 부천시 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">타일 시공하면서 기존 대리석 문턱이랑 색이 안 맞았는데 기존 대리석을 철거하고 새 석재로 딱 맞게 재단해서 넣어주셨어요. 주변에서 어디서 했냐고 많이들 물어보세요.</p><div class="rv-who">유현O · 용산구 · 2026.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">손님 오실 때마다 낡은 문턱이 신경 쓰였는데 하루 만에 철거부터 마감까지 다 끝내주셨습니다. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">오성O · 광진구 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">손님 오실 때마다 낡은 문턱이 신경 쓰였는데 견적 낼 때 석재 종류별로 가격 차이를 자세히 설명해주셨어요. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">황도O · 광진구 · 2026.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">예전 대리석이 두께가 안 맞아서 단차가 심했는데 단차까지 정확하게 맞춰서 걸려 넘어질 일이 없어졌어요. 주변에서 어디서 했냐고 많이들 물어보세요.</p><div class="rv-who">오성O · 강북구 · 2026.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">이사 오기 전에 낡은 대리석 문턱부터 손보고 싶었는데 무늬랑 결까지 신경 써서 골라주셔서 만족스러웠어요. 이 정도로 티 안 나게 마감될 줄은 몰랐습니다.</p><div class="rv-who">윤진O · 동작구 · 2025.03</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">상가 입구 대리석이 깨져서 미관상 안 좋았는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">고진O · 용인시 · 2026.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 모서리가 깨져서 청소기 돌릴 때마다 걸렸는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 예상 기간보다 빨리 끝나서 좋았어요.</p><div class="rv-who">한우O · 동작구 · 2026.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">대리석이 갈라져서 그 틈으로 먼지가 계속 끼었는데 색상 샘플을 여러 개 보여주시면서 집 분위기에 맞는 걸 골라주셨습니다. 청소할 때마다 편해져서 매일 만족하고 있습니다.</p><div class="rv-who">박서O · 강동구 · 2026.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">예전 대리석이 두께가 안 맞아서 단차가 심했는데 기존 대리석을 철거하고 새 석재로 딱 맞게 재단해서 넣어주셨어요. 청소할 때마다 편해져서 매일 만족하고 있습니다.</p><div class="rv-who">이진O · 동작구 · 2025.12</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">예전 대리석이 두께가 안 맞아서 단차가 심했는데 철거할 때 먼지 안 나게 조심해서 작업해주셨습니다. 이제 걸려 넘어질 걱정 없이 편하게 다닙니다.</p><div class="rv-who">신하O · 중랑구 · 2026.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">타일 시공하면서 기존 대리석 문턱이랑 색이 안 맞았는데 마감선까지 반듯하게 잘 잡아주셔서 티가 안 났어요. 주변에서 어디서 했냐고 많이들 물어보세요.</p><div class="rv-who">장하O · 성북구 · 2026.03</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">예전 대리석이 두께가 안 맞아서 단차가 심했는데 단차까지 정확하게 맞춰서 걸려 넘어질 일이 없어졌어요. 친절하게 상담해주셔서 믿고 맡길 수 있었어요.</p><div class="rv-who">남태O · 인천 미추홀구 · 2026.01</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">이사 오기 전에 낡은 대리석 문턱부터 손보고 싶었는데 마감선까지 반듯하게 잘 잡아주셔서 티가 안 났어요. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">신성O · 군포시 · 2025.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 단차까지 정확하게 맞춰서 걸려 넘어질 일이 없어졌어요. 이 정도로 티 안 나게 마감될 줄은 몰랐습니다.</p><div class="rv-who">남민O · 시흥시 · 2026.02</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">이사 오기 전에 낡은 대리석 문턱부터 손보고 싶었는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 생각했던 것보다 훨씬 깔끔하게 마무리됐습니다.</p><div class="rv-who">고서O · 인천 청라 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★☆</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 기존 대리석을 철거하고 새 석재로 딱 맞게 재단해서 넣어주셨어요. 새 문턱 놓으니까 현관 분위기가 확 달라졌어요.</p><div class="rv-who">심서O · 인천 연수구 · 2025.09</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">인테리어 하면서 다른 건 다 새로 했는데 문턱만 그대로라 눈에 띄었는데 철거할 때 먼지 안 나게 조심해서 작업해주셨습니다. 이 정도로 티 안 나게 마감될 줄은 몰랐습니다.</p><div class="rv-who">한은O · 서초구 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">인테리어 하면서 다른 건 다 새로 했는데 문턱만 그대로라 눈에 띄었는데 기존 대리석을 철거하고 새 석재로 딱 맞게 재단해서 넣어주셨어요. 부모님도 너무 만족해하셔서 효도한 기분이었어요.</p><div class="rv-who">한지O · 시흥시 · 2026.06</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">손님 오실 때마다 낡은 문턱이 신경 쓰였는데 기존 문턱 철거하면서 밑에 상태도 같이 점검해주셨습니다. 손님들이 오실 때마다 문턱 예쁘다고 한마디씩 하세요.</p><div class="rv-who">문우O · 성동구 · 2026.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 모서리가 깨져서 청소기 돌릴 때마다 걸렸는데 철거할 때 먼지 안 나게 조심해서 작업해주셨습니다. 친절하게 상담해주셔서 믿고 맡길 수 있었어요.</p><div class="rv-who">조영O · 김포시 · 2025.07</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">대리석이 갈라져서 그 틈으로 먼지가 계속 끼었는데 단차까지 정확하게 맞춰서 걸려 넘어질 일이 없어졌어요. 친절하게 상담해주셔서 믿고 맡길 수 있었어요.</p><div class="rv-who">임도O · 인천 남동구 · 2026.01</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">현관 대리석 문턱이 깨져서 걸려 넘어질 뻔한 적이 많았는데 철거할 때 먼지 안 나게 조심해서 작업해주셨습니다. 친절하게 상담해주셔서 믿고 맡길 수 있었어요.</p><div class="rv-who">권윤O · 서대문구 · 2026.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">예전 대리석이 두께가 안 맞아서 단차가 심했는데 작업하는 동안 소음이 크지 않아서 이웃한테 미안할 일이 없었습니다. 이 정도로 티 안 나게 마감될 줄은 몰랐습니다.</p><div class="rv-who">양성O · 용인시 · 2025.04</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">문턱 밑이 들떠서 밟을 때마다 소리가 났는데 마감선까지 반듯하게 잘 잡아주셔서 티가 안 났어요. 이 정도로 티 안 나게 마감될 줄은 몰랐습니다.</p><div class="rv-who">고지O · 서대문구 · 2026.05</div></article>
+        <article class="rv-card"><div class="rv-stars">★★★★★</div><p class="rv-text">타일 시공하면서 기존 대리석 문턱이랑 색이 안 맞았는데 두께가 안 맞던 부분을 밑작업부터 다시 잡아주셨어요. 생각했던 것보다 훨씬 깔끔하게 마무리됐습니다.</p><div class="rv-who">최진O · 의정부시 · 2026.08</div></article>
+      </div>
+      <button class="rv-more" id="rvMoreBtn" type="button">
+        <span id="rvMoreLabel">후기 94개 더 보기</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"></path></svg>
+      </button>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section id="faq" style="background:var(--bg-tint);">
     <div class="wrap">
@@ -566,5 +706,27 @@
   });
 </script>
 
+
+<script>
+(function(){
+  var grid = document.getElementById('rvGrid');
+  var btn = document.getElementById('rvMoreBtn');
+  var label = document.getElementById('rvMoreLabel');
+  if(!grid || !btn) return;
+  var total = grid.querySelectorAll('.rv-card').length;
+  var hidden = Math.max(total - 6, 0);
+  var moreText = '후기 ' + hidden + '개 더 보기';
+  var lessText = '후기 접기';
+  if(hidden <= 0){ btn.style.display = 'none'; return; }
+  btn.addEventListener('click', function(){
+    var expanded = grid.classList.toggle('rv-expanded');
+    btn.classList.toggle('on', expanded);
+    label.textContent = expanded ? lessText : moreText;
+    if(!expanded){
+      document.getElementById('reviews').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+})();
+</script>
 </body>
 </html>
