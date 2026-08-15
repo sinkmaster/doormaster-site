@@ -2,7 +2,7 @@
 
 ## 이 폴더가 뭔가요
 
-사이트 4개의 소스입니다. `build.py` 하나로 4개를 전부 만들어냅니다.
+사이트 4개의 소스입니다. **네 사이트는 색상·구조·디자인이 각각 다릅니다.**
 
 | 폴더 | 주소 | 상호 |
 |---|---|---|
@@ -40,20 +40,20 @@ cd doormaster-site
 
 ### 1. 내용 고치기
 
-**`build.py` 하나만 고치면 됩니다.** `main/index.html` 같은 건 직접 고치지 마세요.
-build.py를 돌리면 덮어써져서 수정한 게 날아갑니다.
+**사이트마다 디자인이 다릅니다.** 고칠 사이트의 `index.html` 을 직접 여세요.
 
-`build.py` 안에서 고칠 곳:
-
-| 고치고 싶은 것 | 찾을 위치 |
+| 고칠 사이트 | 파일 |
 |---|---|
-| 전화번호, 사업자번호, 주소, 상담시간 | 맨 위 `BIZ = {` 부분 |
-| 출장 지역 목록 | `REGIONS = {` 부분 |
-| 사이트별 문구·서비스·FAQ·후기 | `SITES = [` 안에서 해당 `"key"` 찾기 |
-| 도메인 전체 변경 | `ROOT_DOMAIN = ` 한 줄 |
+| doormaster.co.kr | `main/index.html` |
+| door.doormaster.co.kr | `door/index.html` |
+| marble.doormaster.co.kr | `marble/index.html` |
+| bath.doormaster.co.kr | `bath/index.html` |
 
-예를 들어 전화번호를 바꾸려면 `BIZ` 안의 `"tel"` 과 `"tel_raw"` 두 곳을 고치면
-4개 사이트 전부에 반영됩니다.
+전화번호처럼 4개 전부 바꿔야 하는 건 4개 파일을 다 고쳐야 합니다.
+Claude Code에 "4개 사이트 전화번호를 ○○로 바꿔줘" 라고 시키면 한 번에 해줍니다.
+
+`build.py` 는 이제 **sitemap.xml 과 robots.txt 만** 만듭니다.
+index.html 은 절대 건드리지 않으니 안심하고 직접 편집하셔도 됩니다.
 
 ### 2. 배포하기
 
@@ -76,7 +76,7 @@ deploy.bat 전화번호 변경
 ./deploy.sh "전화번호 변경"
 ```
 
-이 명령 하나가 **HTML 생성 → 커밋 → GitHub push** 를 다 합니다.
+이 명령 하나가 **sitemap 갱신 → 커밋 → GitHub push** 를 다 합니다.
 push가 끝나면 Cloudflare가 알아서 4개 사이트를 다시 배포합니다.
 
 ### 3. 확인
@@ -87,16 +87,14 @@ push가 끝나면 Cloudflare가 알아서 4개 사이트를 다시 배포합니�
 
 ## 미리보기 (배포 전에 확인하고 싶을 때)
 
-```bash
-python build.py
-```
-
-만 실행하면 GitHub에 올리지 않고 파일만 만듭니다.
-`main/index.html` 을 브라우저로 열어 확인한 뒤, 괜찮으면 `deploy` 를 실행하세요.
+고친 `index.html` 파일을 그냥 **더블클릭해서 브라우저로 열어보면 됩니다.**
+서버 없이도 그대로 보입니다. 확인 후 괜찮으면 `deploy` 를 실행하세요.
 
 ---
 
 ## 시공 사진 넣기
+
+각 사이트 사진 자리는 `.ph-placeholder` 라는 이름으로 되어 있습니다.
 
 각 사이트의 `images/` 폴더에 사진을 넣습니다.
 
@@ -106,10 +104,11 @@ main/images/case-1.jpg  ~  case-6.jpg
 
 권장: 가로 800px 이상, 4:3 비율.
 
-사진을 넣은 뒤 `build.py` 의 `cse = "\n".join(` 부분에서
-`<div class="ph">시공 사진 자리...</div>` 를
-`<img src="images/case-{i+1}.jpg" alt="{esc(t)}">` 로 바꾸면 됩니다.
-이 부분은 손대기 까다로우니 필요할 때 도움 받으세요.
+사진을 넣은 뒤 해당 `index.html` 에서
+`<div class="ph-placeholder">시공 사진 자리...</div>` 부분을
+`<img src="images/case-1.jpg" alt="설명">` 으로 바꾸면 됩니다.
+
+Claude Code에 "main 사이트 시공사진 자리에 images 폴더 사진 넣어줘" 라고 시키면 알아서 해줍니다.
 
 ---
 
