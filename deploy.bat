@@ -37,6 +37,7 @@ if %errorlevel%==0 (
 )
 
 set MSG=%*
+if defined MSG set MSG=%MSG:"=%
 if "%MSG%"=="" set MSG=사이트 수정
 
 git commit -m "%MSG%"
