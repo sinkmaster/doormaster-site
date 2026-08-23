@@ -4,7 +4,7 @@ cd /d "%~dp0"
 
 echo.
 echo ============================================
-echo   doormaster.co.kr  4개 사이트 배포
+echo   doormaster.co.kr  5개 사이트 배포
 echo ============================================
 echo.
 
@@ -66,6 +66,7 @@ echo.
 echo   https://doormaster.co.kr
 echo   https://door.doormaster.co.kr
 echo   https://marble.doormaster.co.kr
+echo   https://cubicle.doormaster.co.kr
 echo   https://bath.doormaster.co.kr
 echo ============================================
 echo.

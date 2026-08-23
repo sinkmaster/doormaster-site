@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# doormaster.co.kr 4개 사이트 배포
+# doormaster.co.kr 5개 사이트 배포
 # 사용법:  ./deploy.sh            또는   ./deploy.sh "문구 수정"
 set -e
 cd "$(dirname "$0")"
 
 echo
 echo "============================================"
-echo "  doormaster.co.kr  4개 사이트 배포"
+echo "  doormaster.co.kr  5개 사이트 배포"
 echo "============================================"
 echo
 
@@ -36,6 +36,7 @@ echo
 echo "  https://doormaster.co.kr"
 echo "  https://door.doormaster.co.kr"
 echo "  https://marble.doormaster.co.kr"
+echo "  https://cubicle.doormaster.co.kr"
 echo "  https://bath.doormaster.co.kr"
 echo "============================================"
 echo
