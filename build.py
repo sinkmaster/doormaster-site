@@ -11,10 +11,7 @@ import os, re, glob, datetime
 ROOT_DOMAIN = "doormaster.co.kr"
 SITES = [
     ("main",   "",       "튼튼 욕실문턱 문지방 문틀 수리"),
-    ("door",   "door",   "튼튼 방문 도어 문턱 수리"),
-    ("marble", "marble", "튼튼 오래된 문턱 대리석 교체"),
     ("cubicle","cubicle","튼튼 큐비클 화장실칸막이 수리"),
-    ("bath",   "bath",   "튼튼 욕실 안방 문짝 교체"),
 ]
 BASE  = os.path.dirname(os.path.abspath(__file__))
 TODAY = datetime.date.today().isoformat()
