@@ -10,7 +10,7 @@ import os, re, glob, datetime
 
 ROOT_DOMAIN = "doormaster.co.kr"
 SITES = [
-    ("main",   "",       "튼튼 욕실문턱 문지방 문틀 수리"),
+    ("main",   "",       "튼튼 문턱 문틀 문짝 수리"),
     ("cubicle","cubicle","튼튼 큐비클 화장실칸막이 수리"),
 ]
 BASE  = os.path.dirname(os.path.abspath(__file__))
