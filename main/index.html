@@ -428,6 +428,54 @@
   #reviews .rv-more:hover{background:var(--ink);color:#fff;}
   #reviews .rv-more svg{width:14px;height:14px;transition:transform .2s ease;}
   #reviews .rv-more.on svg{transform:rotate(180deg);}
+
+  .cs-back{display:inline-block;font-size:13.5px;color:var(--moss-deep);text-decoration:none;margin-bottom:18px;}
+  .cs-back:hover{text-decoration:underline;}
+  .cs-badge{display:inline-block;background:var(--moss-deep);color:#fff;font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;margin-right:6px;}
+  .cs-badge.gray{background:#EAF3F8;color:var(--moss-deep);}
+  .cs-title{font-family:var(--serif);font-size:clamp(24px,3vw,34px);line-height:1.4;margin:16px 0 22px;color:var(--ink);}
+  .cs-wrap{max-width:860px;}
+  .cs-figs{display:grid;gap:22px;margin:8px 0 26px;}
+  .cs-figs figure{margin:0;}
+  .cs-figs img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);}
+  .cs-figs figcaption{font-size:13.5px;color:var(--muted2);margin-top:9px;line-height:1.6;}
+  .cs-figs figcaption b{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;margin-right:8px;color:#fff;background:var(--moss-deep);}
+  .cs-figs figcaption b.before{background:#9a3b3b;}
+  .cs-meta{display:flex;flex-wrap:wrap;gap:8px 26px;padding:16px 20px;background:#F7FBFD;border:1px solid var(--line);border-radius:12px;margin-bottom:34px;font-size:14px;}
+  .cs-meta span{color:var(--muted2);margin-right:8px;}
+  .cs-meta b{color:var(--ink);font-weight:600;}
+  .cs-body h3{font-family:var(--serif);font-size:20px;margin:38px 0 12px;color:var(--ink);padding-left:12px;border-left:4px solid var(--moss);}
+  .cs-body p{font-size:15.5px;line-height:1.9;color:var(--muted);margin:0 0 14px;}
+  .cs-body>p:first-child{font-size:17px;color:var(--ink);line-height:1.85;}
+  .cs-body ul,.cs-body ol{margin:0 0 14px;padding-left:0;font-size:15.5px;line-height:1.85;color:var(--muted);list-style:none;}
+  .cs-body ul li{padding-left:24px;position:relative;margin-bottom:6px;}
+  .cs-body ul li::before{content:"✔";position:absolute;left:0;color:var(--moss);font-weight:700;}
+  .cs-body ol{counter-reset:s;}
+  .cs-body ol li{padding-left:34px;position:relative;margin-bottom:8px;counter-increment:s;}
+  .cs-body ol li::before{content:counter(s);position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--moss-deep);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .cs-qa{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px;background:#fff;}
+  .cs-qa b{display:block;color:var(--ink);margin-bottom:6px;font-size:15.5px;}
+  .cs-qa p{margin:0;}
+  .cs-sum{background:#F7FBFD;border-left:4px solid var(--moss);padding:16px 20px;border-radius:0 12px 12px 0;}
+  .cs-sum p{margin:0 0 4px;color:var(--ink);}
+  .cs-cta{margin:40px 0 10px;padding:26px 24px;background:var(--ink);border-radius:16px;color:#fff;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;}
+  .cs-cta b{font-size:17px;}
+  .cs-cta .btn{background:#fff;color:var(--ink);}
+  .cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:900px){.cs-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.cs-grid{grid-template-columns:1fr;}}
+  .cs-card{display:block;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;}
+  .cs-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(22,50,74,.10);}
+  .cs-card .th{position:relative;aspect-ratio:4/3;overflow:hidden;background:#EAF3F8;}
+  .cs-card .th img{width:100%;height:100%;object-fit:cover;display:block;}
+  .cs-card .th .rg{position:absolute;left:12px;top:12px;background:rgba(19,112,153,.92);color:#fff;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;}
+  .cs-card .th .af{position:absolute;right:12px;bottom:12px;background:rgba(255,255,255,.92);color:var(--ink);font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;}
+  .cs-card .bd{padding:16px 18px 18px;}
+  .cs-card h3{font-size:15.5px;line-height:1.5;margin:0 0 8px;font-weight:700;}
+  .cs-card .mt{font-size:12.5px;color:var(--muted2);}
+  .cs-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px;}
+  .cs-filter button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;}
+  .cs-filter button.on{background:var(--ink);border-color:var(--ink);color:#fff;}
 </style>
 </head>
 <body>
@@ -442,7 +490,7 @@
         <a href="mudeok.html">문턱 없애기</a>
         <a href="door-replace.html">문짝 교체</a>
         <a href="door-fix.html">문짝 파손 복원</a>
-        <a href="index.html#works">시공 사례</a>
+        <a href="cases.html">시공 사례</a>
         <a href="guide.html">수리 정보</a>
       </div>
       <a href="#contact" class="btn btn-primary">상담 문의</a>
@@ -690,105 +738,9 @@
     <div class="wrap">
       <span class="label">Works</span>
       <h2 class="headline">직접 다녀온 시공 현장</h2>
-      <p class="lede">아파트 욕실부터 오래된 빌라 화장실, 상가와 현관 문턱까지 실제 시공 내용을 정리했습니다.</p>
-      <div class="gal-filter">
-        <button data-cat="all" class="on">전체</button>
-        <button data-cat="bath">욕실·화장실 문턱</button>
-        <button data-cat="frame">마루·문틀 부식</button>
-        <button data-cat="entry">현관·베란다</button>
-        <button data-cat="door">문짝·필름</button>
-      </div>
-      <div class="gal">
-        <article class="gal-card" data-cat="bath">
-          <div class="gal-ba">
-            <div class="gal-half b"><img src="images/case-1-before.jpg" alt="욕실 문턱이 물을 먹어 겉면이 들뜨고 검게 곰팡이가 번진 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 전</span></div>
-            <div class="gal-half a"><img src="images/case-1-after.jpg" alt="문턱을 걷어내고 새로 세운 뒤 마감선까지 정리한 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 후</span></div>
-          </div>
-          <div class="gal-body">
-            <div class="loc">아파트 욕실</div>
-            <h4>아파트 욕실 문턱 전면 재시공</h4>
-            <p>문턱 밑 몰탈이 완전히 젖어 있던 현장. 걷어내고 방수턱을 새로 세웠습니다.</p>
-          </div>
-        </article>
-        <article class="gal-card" data-cat="frame">
-          <div class="gal-ba">
-            <div class="gal-half b"><img src="images/case-2-before.jpg" alt="욕실 문틀 상부 모서리가 습기로 검게 상하고 마감이 부서진 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 전</span></div>
-            <div class="gal-half a"><img src="images/case-2-after.jpg" alt="부식 부위를 제거하고 문틀 모서리를 다시 잡아 마감한 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 후</span></div>
-          </div>
-          <div class="gal-body">
-            <div class="loc">거실 마루 인접</div>
-            <h4>문턱 앞 마루 부식 동반 보수</h4>
-            <p>거실 마루 3장까지 번진 상태. 원인 차단 후 마루까지 정리했습니다.</p>
-          </div>
-        </article>
-        <article class="gal-card" data-cat="bath">
-          <div class="gal-ba">
-            <div class="gal-half b"><img src="images/case-3-before.jpg" alt="문틀 하부에 물 자국이 번지고 도장면이 벗겨진 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 전</span></div>
-            <div class="gal-half a"><img src="images/case-3-after.jpg" alt="하부를 보수하고 방수 마감까지 마친 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 후</span></div>
-          </div>
-          <div class="gal-body">
-            <div class="loc">빌라 화장실</div>
-            <h4>오래된 빌라 화장실 문턱</h4>
-            <p>타일과 문턱 사이가 벌어져 계속 새던 현장입니다.</p>
-          </div>
-        </article>
-        <article class="gal-card" data-cat="bath">
-          <div class="gal-ba">
-            <div class="gal-half b"><img src="images/case-4-before.jpg" alt="썩은 목재 문턱을 뜯어낸 직후, 속까지 검게 삭아 있던 단면" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 전</span></div>
-            <div class="gal-half a"><img src="images/case-4-after.jpg" alt="새 문턱을 앉히고 욕실 타일과 단차를 맞춘 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 후</span></div>
-          </div>
-          <div class="gal-body">
-            <div class="loc">상가 화장실</div>
-            <h4>상가 화장실 문턱 방수</h4>
-            <p>물 사용량이 많은 곳이라 방수층을 한 겹 더 올렸습니다.</p>
-          </div>
-        </article>
-        <article class="gal-card" data-cat="entry">
-          <div class="gal-ba">
-            <div class="gal-half b"><img src="images/case-5-before.jpg" alt="문지방 상판이 세로로 갈라져 틈이 벌어진 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 전</span></div>
-            <div class="gal-half a"><img src="images/case-5-after.jpg" alt="갈라진 문지방을 교체하고 양쪽 바닥과 높이를 맞춘 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 후</span></div>
-          </div>
-          <div class="gal-body">
-            <div class="loc">단독주택 현관</div>
-            <h4>현관 문턱 빗물 유입 차단</h4>
-            <p>비만 오면 현관이 젖던 집. 구배를 다시 잡았습니다.</p>
-          </div>
-        </article>
-        <article class="gal-card" data-cat="door">
-          <div class="gal-ba">
-            <div class="gal-half b"><img src="images/case-6-before.jpg" alt="미서기 문틀 시트 필름이 벗겨지고 하부가 파손돼 목재가 드러난 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 전</span></div>
-            <div class="gal-half a"><img src="images/case-6-after.jpg" alt="벗겨진 시트를 걷어내고 문틀 필름을 재시공해 마감선까지 정리한 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 후</span></div>
-          </div>
-          <div class="gal-body">
-            <div class="loc">아파트 미서기 문틀</div>
-            <h4>문틀 필름 벗겨짐 재시공</h4>
-            <p>레일 옆 시트가 들뜨고 찢겨 속 목재가 드러난 현장. 들뜬 시트를 걷어내고 필름을 다시 붙였습니다.</p>
-          </div>
-        </article>
-        <article class="gal-card" data-cat="door">
-          <div class="gal-ba">
-            <div class="gal-half b"><img src="images/case-7-before.jpg" alt="용인 현관 벽면 필름 두 곳이 찢어져 테이프로 가려 둔 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 전</span></div>
-            <div class="gal-half a"><img src="images/case-7-after.jpg" alt="퍼티 복원 뒤 비슷한 무늬 필름으로 재시공한 현관 벽면" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 후</span></div>
-          </div>
-          <div class="gal-body">
-            <div class="loc">용인 아파트 현관</div>
-            <h4>현관 벽면 필름 찢어짐 · 퍼티 복원 후 재시공</h4>
-            <p>거울 옆 벽면 두 곳이 찢어져 테이프로 가려 둔 현장. 파인 벽체를 퍼티로 메우고 비슷한 무늬 필름으로 다시 붙였습니다. <a href="case-film-yongin.html" style="color:var(--moss-deep);font-weight:700;">자세히 보기 →</a></p>
-          </div>
-        </article>
-        <article class="gal-card" data-cat="door">
-          <div class="gal-ba">
-            <div class="gal-half b"><img src="images/case-8-before.jpg" alt="수원 작은방 문짝 가운데에 구멍이 뚫린 상태" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 전</span></div>
-            <div class="gal-half a"><img src="images/case-8-after.jpg" alt="구멍을 퍼티로 메워 연마하고 비슷한 무늬 필름으로 감싼 문짝" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"><span class="t">시공 후</span></div>
-          </div>
-          <div class="gal-body">
-            <div class="loc">수원 아파트 작은방</div>
-            <h4>방문 구멍 · 교체 없이 퍼티 복원·필름 마감</h4>
-            <p>문짝에 주먹만 한 구멍이 난 전세집. 퍼티로 메워 연마한 뒤 비슷한 무늬 필름으로 감쌌습니다. <a href="case-door-suwon.html" style="color:var(--moss-deep);font-weight:700;">자세히 보기 →</a></p>
-          </div>
-        </article>
-      </div>
-      <p class="gal-count" id="galCount"></p>
+      <p class="lede">아파트 욕실부터 오래된 빌라 화장실, 현관 문턱과 문짝·필름까지 실제 시공 내용을 정리했습니다. 사례를 누르면 현장 상태와 작업 순서까지 볼 수 있습니다.</p>
+      <div class="cs-grid"><a href="case-door-suwon.html" class="cs-card" data-cat="door" data-rg="수원"><div class="th"><img src="images/case-8-after.jpg" alt="수원 방문수리 — 문짝 구멍, 교체 없이 퍼티 복원·필름으로 마감 시공 후" loading="lazy"><span class="rg">수원</span><span class="af">시공 후</span></div><div class="bd"><h3>수원 방문수리 — 문짝 구멍, 교체 없이 퍼티 복원·필름으로 마감</h3><div class="mt">아파트 작은방 · 문짝·필름</div></div></a><a href="case-film-yongin.html" class="cs-card" data-cat="door" data-rg="용인"><div class="th"><img src="images/case-7-after.jpg" alt="용인 인테리어필름시공 — 현관 벽면 필름 찢어짐, 퍼티 복원 후 재시공 시공 후" loading="lazy"><span class="rg">용인</span><span class="af">시공 후</span></div><div class="bd"><h3>용인 인테리어필름시공 — 현관 벽면 필름 찢어짐, 퍼티 복원 후 재시공</h3><div class="mt">아파트 현관 · 문짝·필름</div></div></a><a href="case-frame-film.html" class="cs-card" data-cat="door" data-rg=""><div class="th"><img src="images/case-6-after.jpg" alt="미서기 문틀 필름 벗겨짐 재시공 — 들뜬 시트 걷어내고 하부 파손 메운 뒤 필름 시공 시공 후" loading="lazy"><span class="rg">아파트 미서기 문틀</span><span class="af">시공 후</span></div><div class="bd"><h3>미서기 문틀 필름 벗겨짐 재시공 — 들뜬 시트 걷어내고 하부 파손 메운 뒤 필름 시공</h3><div class="mt">아파트 미서기 문틀 · 문짝·필름</div></div></a><a href="case-bath-threshold.html" class="cs-card" data-cat="th" data-rg=""><div class="th"><img src="images/case-1-after.jpg" alt="아파트 욕실 문턱 전면 재시공 — 젖은 몰탈 걷어내고 방수턱 새로 세움 시공 후" loading="lazy"><span class="rg">아파트 욕실</span><span class="af">시공 후</span></div><div class="bd"><h3>아파트 욕실 문턱 전면 재시공 — 젖은 몰탈 걷어내고 방수턱 새로 세움</h3><div class="mt">아파트 욕실 · 문턱·문틀</div></div></a><a href="case-frame-rot.html" class="cs-card" data-cat="th" data-rg=""><div class="th"><img src="images/case-2-after.jpg" alt="문턱 앞 마루 부식 동반 보수 — 문틀 모서리 부식 제거 후 마루 3장까지 정리 시공 후" loading="lazy"><span class="rg">거실 마루 인접 문틀</span><span class="af">시공 후</span></div><div class="bd"><h3>문턱 앞 마루 부식 동반 보수 — 문틀 모서리 부식 제거 후 마루 3장까지 정리</h3><div class="mt">거실 마루 인접 문틀 · 문턱·문틀</div></div></a><a href="case-villa-threshold.html" class="cs-card" data-cat="th" data-rg=""><div class="th"><img src="images/case-3-after.jpg" alt="오래된 빌라 화장실 문턱 보수 — 타일과 문턱 사이 벌어짐, 하부 보수 후 방수 마감 시공 후" loading="lazy"><span class="rg">빌라 화장실</span><span class="af">시공 후</span></div><div class="bd"><h3>오래된 빌라 화장실 문턱 보수 — 타일과 문턱 사이 벌어짐, 하부 보수 후 방수 마감</h3><div class="mt">빌라 화장실 · 문턱·문틀</div></div></a></div>
+      <div class="cta-row" style="margin-top:32px;"><a href="cases.html" class="btn btn-primary">전체 시공사례 보기 →</a></div>
     </div>
   </section>
 
@@ -982,7 +934,7 @@
         <a href="#service">시공 항목</a>
         <a href="#process">진행 과정</a>
         <a href="area.html">시공 지역</a>
-        <a href="#works">시공 사례</a>
+        <a href="cases.html">시공 사례</a>
         <a href="#faq">자주 묻는 질문</a>
       </div>
     </div>
