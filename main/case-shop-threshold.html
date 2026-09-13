@@ -673,6 +673,54 @@
   .cs-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px;}
   .cs-filter button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;}
   .cs-filter button.on{background:var(--ink);border-color:var(--ink);color:#fff;}
+
+  .cs-back{display:inline-block;font-size:13.5px;color:var(--moss-deep);text-decoration:none;margin-bottom:18px;}
+  .cs-back:hover{text-decoration:underline;}
+  .cs-badge{display:inline-block;background:var(--moss-deep);color:#fff;font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;margin-right:6px;}
+  .cs-badge.gray{background:#EAF3F8;color:var(--moss-deep);}
+  .cs-title{font-family:var(--serif);font-size:clamp(24px,3vw,34px);line-height:1.4;margin:16px 0 22px;color:var(--ink);}
+  .cs-wrap{max-width:860px;}
+  .cs-figs{display:grid;gap:22px;margin:8px 0 26px;}
+  .cs-figs figure{margin:0;}
+  .cs-figs img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);}
+  .cs-figs figcaption{font-size:13.5px;color:var(--muted2);margin-top:9px;line-height:1.6;}
+  .cs-figs figcaption b{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;margin-right:8px;color:#fff;background:var(--moss-deep);}
+  .cs-figs figcaption b.before{background:#9a3b3b;}
+  .cs-meta{display:flex;flex-wrap:wrap;gap:8px 26px;padding:16px 20px;background:#F7FBFD;border:1px solid var(--line);border-radius:12px;margin-bottom:34px;font-size:14px;}
+  .cs-meta span{color:var(--muted2);margin-right:8px;}
+  .cs-meta b{color:var(--ink);font-weight:600;}
+  .cs-body h3{font-family:var(--serif);font-size:20px;margin:38px 0 12px;color:var(--ink);padding-left:12px;border-left:4px solid var(--moss);}
+  .cs-body p{font-size:15.5px;line-height:1.9;color:var(--muted);margin:0 0 14px;}
+  .cs-body>p:first-child{font-size:17px;color:var(--ink);line-height:1.85;}
+  .cs-body ul,.cs-body ol{margin:0 0 14px;padding-left:0;font-size:15.5px;line-height:1.85;color:var(--muted);list-style:none;}
+  .cs-body ul li{padding-left:24px;position:relative;margin-bottom:6px;}
+  .cs-body ul li::before{content:"✔";position:absolute;left:0;color:var(--moss);font-weight:700;}
+  .cs-body ol{counter-reset:s;}
+  .cs-body ol li{padding-left:34px;position:relative;margin-bottom:8px;counter-increment:s;}
+  .cs-body ol li::before{content:counter(s);position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--moss-deep);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .cs-qa{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px;background:#fff;}
+  .cs-qa b{display:block;color:var(--ink);margin-bottom:6px;font-size:15.5px;}
+  .cs-qa p{margin:0;}
+  .cs-sum{background:#F7FBFD;border-left:4px solid var(--moss);padding:16px 20px;border-radius:0 12px 12px 0;}
+  .cs-sum p{margin:0 0 4px;color:var(--ink);}
+  .cs-cta{margin:40px 0 10px;padding:26px 24px;background:var(--ink);border-radius:16px;color:#fff;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;}
+  .cs-cta b{font-size:17px;}
+  .cs-cta .btn{background:#fff;color:var(--ink);}
+  .cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:900px){.cs-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.cs-grid{grid-template-columns:1fr;}}
+  .cs-card{display:block;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s;}
+  .cs-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(22,50,74,.10);}
+  .cs-card .th{position:relative;aspect-ratio:4/3;overflow:hidden;background:#EAF3F8;}
+  .cs-card .th img{width:100%;height:100%;object-fit:cover;display:block;}
+  .cs-card .th .rg{position:absolute;left:12px;top:12px;background:rgba(19,112,153,.92);color:#fff;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px;}
+  .cs-card .th .af{position:absolute;right:12px;bottom:12px;background:rgba(255,255,255,.92);color:var(--ink);font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;}
+  .cs-card .bd{padding:16px 18px 18px;}
+  .cs-card h3{font-size:15.5px;line-height:1.5;margin:0 0 8px;font-weight:700;}
+  .cs-card .mt{font-size:12.5px;color:var(--muted2);}
+  .cs-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px;}
+  .cs-filter button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;}
+  .cs-filter button.on{background:var(--ink);border-color:var(--ink);color:#fff;}
 </style>
 
 <style>
@@ -726,7 +774,7 @@
         <div class="cs-figs"><figure><img src="images/case-4-before.jpg" alt="평택 상가 화장실 문턱 방수 — 썩은 목재 문턱 철거 후 새 문턱, 방수층 한 겹 더 시공 전" loading="lazy"><figcaption><b class="before">시공 전</b>썩은 목재 문턱을 뜯어낸 직후, 속까지 검게 삭아 있던 단면</figcaption></figure><figure><img src="images/case-4-after.jpg" alt="평택 상가 화장실 문턱 방수 — 썩은 목재 문턱 철거 후 새 문턱, 방수층 한 겹 더 시공 후" loading="lazy"><figcaption><b class="">시공 후</b>새 문턱을 앉히고 욕실 타일과 단차를 맞춘 상태</figcaption></figure></div>
         <div class="cs-meta"><div><span>지역</span><b>평택</b></div><div><span>작업</span><b>문턱 교체 · 방수 보강</b></div><div><span>인원·시간</span><b>1명 · 2시간</b></div></div>
         <div class="cs-body">
-<p>문턱이 속까지 삭았으면 보수가 아니라 교체입니다. 겉만 갈아 끼우면 상가 화장실처럼 물이 자주 닿는 곳은 금방 같은 상태로 돌아옵니다. 물 사용량이 많은 상가 화장실에서 목재 문턱이 속까지 검게 삭아 있던 현장이었습니다. 평택, 1명 2시간 작업으로 당일 마무리했습니다.</p>
+<p>문턱이 속까지 삭았으면 보수가 아니라 교체입니다. 겉만 갈아 끼우면 상가 화장실처럼 물이 자주 닿는 곳은 금방 같은 상태로 돌아옵니다. 물 사용량이 많은 상가 화장실에서 목재 문턱이 속까지 검게 삭아 있던 현장이었습니다. 평택 현장, 1명 2시간 작업이었습니다.</p>
 <h3>현장 상태</h3>
 <ul><li>목재 문턱이 속까지 검게 삭아 있었습니다. 뜯어낸 단면이 그대로 보였습니다.</li><li>사용량이 많아 일반 주택보다 물이 자주 닿는 자리였습니다.</li><li>보수로 버틸 상태가 아니어서 교체로 판단했습니다.</li></ul>
 <h3>지금 확인해 보세요</h3>
@@ -741,7 +789,7 @@
 <ul><li>겉면 도장만 벗겨지고 속이 단단하다 → 표면 보수와 방수 마감으로 됩니다.</li><li>눌렀을 때 들어가고 속이 검게 삭았다 → 뜯어내고 새로 앉힙니다. 이번 현장이 여기입니다.</li><li>물 사용이 많은 상가·업소다 → 교체하면서 아래 방수층을 한 겹 더 올립니다.</li></ul>
 <p>이번 현장은 두 번째와 세 번째에 다 해당해 철거·방수 보강·교체로 갔습니다.</p>
 <h3>작업 결과</h3>
-<ul><li>속까지 삭았던 목재가 새 문턱으로 바뀌었습니다.</li><li>문턱 아래 방수층을 한 겹 더 올려 물이 자주 닿아도 버티게 했습니다.</li><li>타일과 단차를 맞춰 물이 고이지 않게 했습니다.</li><li>평택, 1명 2시간 작업으로 당일 마무리했습니다.</li></ul>
+<ul><li>속까지 삭았던 목재가 새 문턱으로 바뀌었습니다.</li><li>문턱 아래 방수층을 한 겹 더 올려 물이 자주 닿아도 버티게 했습니다.</li><li>타일과 단차를 맞춰 물이 고이지 않게 했습니다.</li><li>평택 현장, 1명 2시간 작업이었습니다.</li></ul>
 <h3>자주 묻는 질문</h3>
 <div class="cs-qa"><b>Q. 문턱만 새로 끼우면 안 되나요?</b><p>A. 아래 방수가 그대로면 새것도 같은 길로 물을 먹습니다. 물 사용이 많은 곳은 방수층 보강을 같이 권합니다.</p></div><div class="cs-qa"><b>Q. 영업 중인데 화장실을 얼마나 못 쓰나요?</b><p>A. 이번 현장은 1명이 2시간에 끝냈습니다. 작업 범위에 따라 달라, 사진을 보내주시면 방문 전에 알려드립니다.</p></div><div class="cs-qa"><b>Q. 목재 말고 다른 재질로 바꿀 수 있나요?</b><p>A. 가능합니다. 현장 상태와 바닥 마감에 맞춰 상담 때 정합니다.</p></div><div class="cs-qa"><b>Q. 비용은 어떻게 되나요?</b><p>A. 현장마다 다릅니다. 사진을 보내주시면 방문 전에 방법과 금액대를 알려드립니다.</p></div>
 <h3>세 줄 요약</h3>
