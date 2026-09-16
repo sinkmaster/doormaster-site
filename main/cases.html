@@ -720,7 +720,7 @@
     <div class="wrap">
       <span class="label">All Cases</span>
       <h1 class="headline" style="font-size:clamp(28px,3.4vw,42px);margin-bottom:10px;">전체 시공사례</h1>
-      <p class="lede" style="margin-bottom:26px;">총 <b id="cs-count">8</b>건의 시공사례가 등록되어 있습니다. 사례를 누르면 시공 전후 사진과 현장 상태, 작업 순서, 자주 묻는 질문까지 볼 수 있습니다.</p>
+      <p class="lede" style="margin-bottom:26px;">총 <b id="cs-count">10</b>건의 시공사례가 등록되어 있습니다. 사례를 누르면 시공 전후 사진과 현장 상태, 작업 순서, 자주 묻는 질문까지 볼 수 있습니다.</p>
       <div class="cs-filter" id="cs-filter">
         <button data-f="all" class="on">전체</button>
         <button data-f="cat:th">문턱·문틀</button>
@@ -741,6 +741,7 @@
     cards.forEach(function(c){var ok=f==='all'||(f.indexOf('cat:')===0&&c.getAttribute('data-cat')===f.slice(4))||(f.indexOf('rg:')===0&&c.getAttribute('data-rg')===f.slice(3));c.style.display=ok?'':'none';if(ok)n++;});
     cnt.textContent=n;
   });});
+  if(cnt)cnt.textContent=cards.length;
 })();
 </script>
 
