@@ -4,9 +4,15 @@
 ※ index.html 과 area-*.html 은 건드리지 않습니다.
    폴더 안의 html 파일을 훑어서 sitemap.xml 과 robots.txt 만 다시 만듭니다.
 
+※ sitemap 에 넣는 주소 규칙 (2026-09-28 수정)
+   - 실제로 열리는 주소는 확장자가 없습니다. 그래서 .html 을 떼고 넣습니다.
+     (예: area-ansan.html  ->  https://doormaster.co.kr/area-ansan)
+   - #앵커 주소는 페이지가 아니라 한 페이지 안의 위치라서 넣지 않습니다.
+     넣으면 구글이 "색인 안 됨"으로 잡아냅니다.
+
 사용법:  python build.py
 """
-import os, re, glob, datetime
+import os, glob, datetime
 
 ROOT_DOMAIN = "doormaster.co.kr"
 SITES = [
@@ -18,15 +24,6 @@ TODAY = datetime.date.today().isoformat()
 
 host = lambda sub: f"{sub}.{ROOT_DOMAIN}" if sub else ROOT_DOMAIN
 
-def section_ids(path):
-    html = open(path, encoding="utf-8").read()
-    out, seen = [], set()
-    for m in re.finditer(r'<section[^>]*\bid="([^"]+)"', html):
-        i = m.group(1)
-        if i not in seen:
-            seen.add(i); out.append(i)
-    return out
-
 def main():
     print(f"기준일: {TODAY}\n")
     for key, sub, brand in SITES:
@@ -36,20 +33,21 @@ def main():
         if not os.path.exists(index):
             print(f"[건너뜀] {key}/index.html 없음"); continue
 
+        # 파일이름에서 .html 을 뗀 것이 실제 주소입니다
+        slug = lambda f: os.path.basename(f)[:-5]
+
         urls = [(base + "/", "1.0")]
         # 지역 허브 + 지역 페이지
         if os.path.exists(os.path.join(folder, "area.html")):
-            urls.append((f"{base}/area.html", "0.9"))
+            urls.append((f"{base}/area", "0.9"))
         for f in sorted(glob.glob(os.path.join(folder, "area-*.html"))):
-            urls.append((f"{base}/{os.path.basename(f)}", "0.8"))
+            urls.append((f"{base}/{slug(f)}", "0.8"))
         # 그 외 html
         for f in sorted(glob.glob(os.path.join(folder, "*.html"))):
             n = os.path.basename(f)
             if n in ("index.html", "area.html") or n.startswith("area-"):
                 continue
-            urls.append((f"{base}/{n}", "0.7"))
-        # 메인 페이지 섹션 앵커
-        urls += [(f"{base}/#{i}", "0.6") for i in section_ids(index)]
+            urls.append((f"{base}/{slug(f)}", "0.7"))
 
         rows = "\n".join(
             f'  <url><loc>{u}</loc><lastmod>{TODAY}</lastmod>'
